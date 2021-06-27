@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuSort"
+        android:icon="@drawable/add"
+        android:title="Date"
+        app:showAsAction="always" />
+    <item android:id="@+id/menuImportant"
+        android:title="Ważne"
+        android:icon="@drawable/importantwhite"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/menuStudy"
+        android:title="Nauka"
+        android:icon="@drawable/studywhite"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/menuSport"
+        android:title="Sport"
+        android:icon="@drawable/sportswhite"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/menuTrip"
+        android:title="Podróże"
+        android:icon="@drawable/tripwhite"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/menuFree"
+        android:title="Czas wolny"
+        android:icon="@drawable/freewhite"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/menuOthers"
+        android:title="Inne"
+        android:icon="@drawable/otherwhite"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/menuAll"
+        android:title="Wszystkie"
+        android:icon="@drawable/allwhite"
+        app:showAsAction="always"/>
+</menu>

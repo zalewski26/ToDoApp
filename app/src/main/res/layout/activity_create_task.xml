@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".CreateTask"
+    tools:ignore="OnClick">
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.100000024">
+
+        <TableRow
+            android:layout_width="360dp"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:id="@+id/btnImportant"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:onClick="btnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/important" />
+
+            <ImageButton
+                android:id="@+id/btnStudy"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:onClick="btnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/study" />
+
+            <ImageButton
+                android:id="@+id/btnSports"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:onClick="btnClick"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/sports" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="300dp"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:id="@+id/btnFree"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:onClick="btnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/free" />
+
+            <ImageButton
+                android:id="@+id/btnTrips"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:onClick="btnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/trip" />
+
+            <ImageButton
+                android:id="@+id/btnOthers"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:onClick="btnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/other" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#808080"
+        android:clickable="true"
+        android:onClick="create"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@color/black"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeBtn" />
+
+    <Button
+        android:id="@+id/dateBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_input"
+        android:onClick="dateClick"
+        android:text="Data"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <Button
+        android:id="@+id/timeBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_input"
+        android:onClick="timeClick"
+        android:text="Godzina"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateBtn"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nowe zadanie"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:counterTextColor="@color/cardview_dark_background"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.050000012">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/myicon"
+            android:drawablePadding="10dp"
+            android:textCursorDrawable="@color/white"
+            android:maxLength="25"
+            android:ems="10"
+            android:hint="Opis"
+            android:inputType="textPersonName"
+            android:nextFocusLeft="@id/editText"
+            android:nextFocusUp="@id/editText"
+            android:padding="7dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
